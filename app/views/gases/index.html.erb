@@ -1,0 +1,31 @@
+<h1>Listing of all gases available</h1>
+
+<table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Specific Gravity</th>
+      <th>H<sub>2</sub>S</th>
+      <th>CO<sub>2</sub></th>
+      <th>N<sub>2</sub></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+   
+    <% @gases.each do |g| %>
+      <tr>
+        <td><%= g.name %></td>
+        <td><%= g.description %></td>
+        <td><%= g.specific_gravity %></td>
+        <td><%= g.h2s %></td>
+        <td><%= g.co2 %></td>
+        <td><%= g.n2 %></td>
+        <td><%= link_to 'Show Gas', gas_path(g) %></td>
+        <td><%= link_to 'Edit Gas', edit_gas_path(g) %></td>
+        <td><%= link_to 'Delete Gas', gas_path(g), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= link_to 'Back', root_path %>

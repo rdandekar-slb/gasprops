@@ -1,0 +1,48 @@
+<h1>Update gas inputs</h1>
+<%= form_with(model: @gas, local: true) do |form| %>
+    <% if @gas.errors.any? %>
+        <div id='error_explanation'>
+            <h2>
+                <%= pluralize(@gas.errors.count, "error") %> prohibited this gas update from being saved
+                <ul>
+                    <% @gas.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                    <% end %>
+                </ul>
+            </h2>
+        </div>
+    <% end %>
+<div>
+    <%= form.label :name, 'Name of gas' %><br>
+    <%= form.text_field :name %>
+</div>
+<div>
+    <%= form.label :description, 'Short description' %> <br>
+    <%= form.text_area :description, size: "65x12" %>
+</div>
+<div>
+    <%= form.label :specific_gravity, 'Specific Gravity' %> <br>
+    <%= form.text_field :specific_gravity %>
+</div>
+<div>
+    <%= form.label :h2s, 'H2S content (fraction)' %> <br>
+    <%= form.text_field :h2s %>
+</div>
+
+<div>
+    <%= form.label :co2, 'CO2 content (fraction)' %> <br>
+    <%= form.text_field :co2 %>
+</div>
+
+<div>
+    <%= form.label :n2, 'N2 content (fraction)' %> <br>
+    <%= form.text_field :n2 %>
+</div>
+
+<div>
+    <%= form.submit %>
+</div>
+
+<% end %>
+
+<%= link_to 'Back', gases_path %>

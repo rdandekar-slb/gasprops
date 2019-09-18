@@ -1,0 +1,9 @@
+<h1>Gas details</h1>
+<p><strong>Name of Gas:</strong><%= @gas.name.upcase %></p>
+<p><strong>Description:</strong><%= @gas.description %></p>
+<p><strong>Specific Gravity:</strong><%= @gas.specific_gravity %></p>
+<p><strong>H<sub>2</sub>S:</strong><%= @gas.h2s %></p>
+<p><strong>CO<sub>2</sub>:</strong><%= @gas.co2 %></p>
+<p><strong>N<sub>2</sub>:</strong><%= @gas.n2 %></p>
+
+<p><%= link_to 'Back', gases_path %></p>
