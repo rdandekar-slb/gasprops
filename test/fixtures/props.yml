@@ -4,7 +4,7 @@ one:
   pressure: 1.5
   temperature: 1.5
   zfactor: 1.5
-  formationvolumefactor: 1.5
+  bg: 1.5
   viscosity: 1.5
   gas: one
 
@@ -12,6 +12,6 @@ two:
   pressure: 1.5
   temperature: 1.5
   zfactor: 1.5
-  formationvolumefactor: 1.5
+  bg: 1.5
   viscosity: 1.5
   gas: two

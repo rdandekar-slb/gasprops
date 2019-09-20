@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     inflect.irregular 'gas', 'gases'
   end
   
-  resources :gases 
+  resources :gases do
+    resources :props
+  end 
   
   root 'welcome#index'
 end
