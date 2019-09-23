@@ -1,3 +1,16 @@
 <h1>Properties for <%= @gas.name %> </h1>
+<div> <strong>Pressure:</strong> <%= @prop.pressure %> </div>
+<div> <strong>Temperature:</strong> <%= @prop.temperature %> </div>
+<div> <strong>Gas Specific Gravity:</strong> <%= @gas.specific_gravity %> </div>
+<div> <strong>H2S:</strong> <%= @gas.h2s %> </div>
+<div> <strong>CO2:</strong> <%= @gas.co2 %> </div>
+<div> <strong>N2:</strong> <%= @gas.n2 %> </div>
+
+<br>
+<div> <strong>Z factor:</strong> <%= @prop.get_zfactor(@prop.pressure, @prop.temperature, @gas.specific_gravity, @gas.h2s, @gas.co2, @gas.n2) %> </div>
+<br>
+
+<%= link_to "Back", gases_path %>
+
 
     
