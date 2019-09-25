@@ -1,0 +1,32 @@
+<h1>Properties for <%= @gas.name %></h1>
+
+<%= form_with(model: [@gas, @gas.props.build], local: true) do |form| %>
+    <div>
+        <%= form.label :pressure, 'Pressure, in psi' %><br>
+        <%= form.text_field :pressure %>
+    </div>
+    <div>
+        <%= form.label :temperature, 'Temperature, in °F' %><br>
+        <%= form.text_field :temperature %>
+    </div>
+<!--
+    <div>
+        <%= form.label :zfactor, 'Z Factor' %><br>
+        <%= form.text_field :zfactor %>
+    </div>
+    
+    <div>
+        <%= form.label :bg, 'Gas Formation Volume Factor, in rcf/scf' %><br>
+        <%= form.text_field :bg %>
+    </div>
+
+    <div>
+        <%= form.label :viscosity, 'Gas Viscosity, in cp' %><br>
+        <%= form.text_field :viscosity %>
+    </div>
+-->            
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
+<%= link_to 'Back', gases_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_13_082825) do
+ActiveRecord::Schema.define(version: 2019_09_19_085747) do
 
   create_table "gases", force: :cascade do |t|
     t.string "name"
@@ -23,4 +23,30 @@ ActiveRecord::Schema.define(version: 2019_09_13_082825) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "properties", force: :cascade do |t|
+    t.float "pressure"
+    t.float "temperature"
+    t.float "zfactor"
+    t.float "formationvolumefactor"
+    t.float "viscosity"
+    t.integer "gas_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["gas_id"], name: "index_properties_on_gas_id"
+  end
+
+  create_table "props", force: :cascade do |t|
+    t.float "pressure"
+    t.float "temperature"
+    t.float "zfactor"
+    t.float "bg"
+    t.float "viscosity"
+    t.integer "gas_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["gas_id"], name: "index_props_on_gas_id"
+  end
+
+  add_foreign_key "properties", "gases"
+  add_foreign_key "props", "gases"
 end

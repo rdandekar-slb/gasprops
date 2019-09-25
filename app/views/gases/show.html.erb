@@ -6,4 +6,5 @@
 <p><strong>CO<sub>2</sub>:</strong><%= @gas.co2 %></p>
 <p><strong>N<sub>2</sub>:</strong><%= @gas.n2 %></p>
 
+<p><%= link_to 'Calculate gas properties', new_gas_prop_path(@gas) %></p>
 <p><%= link_to 'Back', gases_path %></p>

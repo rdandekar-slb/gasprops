@@ -22,9 +22,9 @@
     <%= form.text_area :description, size: "50x5" %>
 </div>
 <div><%= form.label :specific_gravity, 'Specific Gravity' %><br><%= form.text_field :specific_gravity %></div>
-<div><%= form.label :h2s, 'H2S content (%)' %><br><%= form.text_field :h2s, :value=>'0.0' %></div>    
-<div><%= form.label :co2, 'CO2 content (%)' %><br><%= form.text_field :co2, :value=>'0.0' %></div>    
-<div><%= form.label :n2, 'N2 content (%)' %><br><%= form.text_field :n2, :value=>'0.0' %></div>
+<div><%= form.label :h2s, 'H2S content (fraction)' %><br><%= form.text_field :h2s, :value=>'0.0' %></div>    
+<div><%= form.label :co2, 'CO2 content (fraction)' %><br><%= form.text_field :co2, :value=>'0.0' %></div>    
+<div><%= form.label :n2, 'N2 content (fraction)' %><br><%= form.text_field :n2, :value=>'0.0' %></div>
 </div>
 <div>
     <%= form.submit %>
