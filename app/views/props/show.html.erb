@@ -10,7 +10,7 @@
 <div> <strong>Z factor:</strong> <%= @prop.get_zfactor(@prop.pressure, @prop.temperature, @gas.specific_gravity, @gas.h2s, @gas.co2, @gas.n2) %> </div>
 <br>
 
-<%= link_to "Back", gases_path %>
+<%= link_to "Back", new_gas_prop_path %>
 
 
     

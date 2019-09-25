@@ -6,7 +6,7 @@ class PropsController < ApplicationController
         @gas = Gas.find(params[:gas_id])
         @prop = @gas.props.new(prop_params)
         #@prop.get_zfactor
-        #@prop.save
+        @prop.save
         redirect_to gas_prop_path(@gas.id,@prop.id)
     end
 
