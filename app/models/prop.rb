@@ -44,8 +44,8 @@ class Prop < ApplicationRecord
     end 
 
 
-
-    @zfactor=z_new
+    return z_new
+    #zfactor=z_new
     #@zfactor=99.999
   end
 end
